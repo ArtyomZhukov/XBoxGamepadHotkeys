@@ -17,6 +17,9 @@ object XBoxToPCController {
 
         robot.mouseWheelScrollVertical(value = state.rightStickY)
 
+        if (state.backJustPressed) {
+            robot.mouseWheelClick()
+        }
         if (state.leftStickJustClicked) {
             robot.mouseBackClick()
         }

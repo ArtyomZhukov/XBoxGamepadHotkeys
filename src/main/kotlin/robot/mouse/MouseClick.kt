@@ -27,6 +27,11 @@ fun Robot.mouseRightClick(pressed: Boolean) {
     }
 }
 
+fun Robot.mouseWheelClick() {
+    mousePress(InputEvent.BUTTON2_DOWN_MASK)
+    mouseRelease(InputEvent.BUTTON2_DOWN_MASK)
+}
+
 private val backButtonMask = InputEvent.getMaskForButton(4)
 
 fun Robot.mouseBackClick() {
